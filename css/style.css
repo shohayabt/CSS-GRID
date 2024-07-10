@@ -10,7 +10,6 @@ body{
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 400;
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
 }
@@ -22,7 +21,7 @@ main{
     "card-one  card-one  card-two  card-three"
     "card-four card-five card-five card-three"
     ;
-
+    padding: 5%;
 }
 section{
     padding: 2em 1.75em;
@@ -84,4 +83,27 @@ section .profile-information{
 .card-five{
     grid-area: card-five;
     background: hsl(219, 29%, 14%);
+}
+/* FOR TABLET DEVICE */
+@media screen and (max-width:1024px) {
+    main{
+        grid-template-areas:
+        "card-one  card-two "
+        "card-four card-five"
+        "card-three card-three"
+        ;
+    
+    }
+}
+/* FOR MOBILE DEVICE */
+@media screen and (max-width:640px) {
+    main{
+        grid-template-areas:
+        "card-one"
+        "card-two"
+        "card-three"
+        "card-four "
+        "card-five"
+        ;
+    }
 }
