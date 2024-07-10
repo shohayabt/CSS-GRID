@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    background-color: hsl(210, 46%, 95%);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    max-width: 1440px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas:
+    "card-one  card-one  card-two  card-three"
+    "card-four card-five card-five card-three"
+    ;
+
+}
+section{
+    padding: 2em 1.75em;
+    border-radius: 10px;
+}
+p{
+    color: hsl(0, 0%, 81%);
+    line-height: 1.6rem;
+}
+h1,.name{
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    line-height: 1.6rem;
+}
+h1{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 20px 0px;
+}
+section .profile-information{
+    display: flex;
+}
+.profile-information img {
+    border-radius: 50%;
+    border: 2px solid hsl(263, 55%, 52%);
+    margin-right: 10px;
+}
+.profile-information > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.card-one{
+    grid-area: card-one;
+    background:hsl(263, 55%, 52%);
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+}
+.card-two{
+    grid-area: card-two;
+    background:hsl(217, 19%, 35%)
+}
+.card-three{
+    grid-area: card-three;
+}
+.card-three > h1 ,.card-four > h1 , .card-three  .name ,.card-four .name,.card-three  p ,.card-four p{
+    color: hsl(217, 19%, 35%);
+
+}
+.card-four , .card-three{
+    background: hsl(0, 0%, 100%);
+}
+
+.card-four{
+    grid-area: card-four;
+}
+.card-five{
+    grid-area: card-five;
+    background: hsl(219, 29%, 14%);
+}
